@@ -37,18 +37,40 @@
 \restoregeometry
 % /Capa
 
+\newpage
+\thispagestyle{empty} % No header/footer on the blank page
+\mbox{} % Adds an empty box, effectively creating a blank page
+\newpage
+
+\newpage
+\thispagestyle{empty} % No header/footer on the blank page
+\mbox{} % Adds an empty box, effectively creating a blank page
+\newpage
+
 \maketitle
 \tableofcontents
 
 \clearpage
+
 
 \input{content/entities/header}
 \input{content/events/header}
 \input{content/bodies/header}
 \input{content/tools/header}
 
-\clearpage
+\newgeometry{margin=0pt}
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=\paperwidth, height=\paperheight]{mapa_UFSC_2014_1500x2121}
+\end{figure}
+\restoregeometry
 
+\newpage
+\thispagestyle{empty} % No header/footer on the blank page
+\mbox{} % Adds an empty box, effectively creating a blank page
+\newpage
+
+\clearpage
 
 
 % Contra-Capa
