@@ -1,0 +1,71 @@
+\documentclass{article}
+
+\usepackage{fullpage}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[a5paper]{geometry}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[scaled=1]{helvet}
+\usepackage[helvet]{sfmath}
+\everymath={\sf}
+\usepackage{pdflscape}
+\usepackage{rotating}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+\usepackage{parskip}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Manual Do Calouro}
+\author{CALICO - Centro Acadêmico Livre da Computação}
+\setcounter{tocdepth}{2}
+
+\begin{document}
+
+
+% Capa
+\newgeometry{margin=0em,top=0em}
+    \vspace{5cm}
+    \includegraphics[width=\paperwidth,height=\paperheight]{capa}
+\restoregeometry
+% /Capa
+
+\maketitle
+\tableofcontents
+
+\clearpage
+
+\input{content/entities/header}
+\input{content/events/header}
+\input{content/bodies/header}
+\input{content/tools/header}
+
+\clearpage
+
+
+
+% Contra-Capa
+\thispagestyle{empty}
+\begin{tikzpicture}[thick,scale=0.05,every node/.style={scale=0.26},overlay]
+  \node[anchor=north east,inner sep=0pt] at ($(current page.south west)+(90cm,-277cm)$) {
+     \includegraphics{CALICO}
+  };
+  
+\end{tikzpicture}
+
+\begin{tikzpicture}[thick,scale=0.05,every node/.style={scale=0.12},overlay]
+    \node[anchor=north west,inner sep=0pt] at ($(current page.south west)+(130cm,-233cm)$) {
+     \includegraphics{p2p}
+  };
+  
+\end{tikzpicture}
+% /Contra-Capa
+
+\end{document}
